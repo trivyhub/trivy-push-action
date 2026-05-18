@@ -45,7 +45,7 @@ runs:
   steps:
     - name: Scan — Docker image
       if: inputs.image != ''
-      uses: aquasecurity/trivy-action@0.30.0
+      uses: aquasecurity/trivy-action@0.29.0
       with:
         image-ref: ${{ inputs.image }}
         format: json
@@ -54,7 +54,7 @@ runs:
 
     - name: Scan — Filesystem
       if: inputs.image == ''
-      uses: aquasecurity/trivy-action@0.30.0
+      uses: aquasecurity/trivy-action@0.29.0
       with:
         scan-type: fs
         scan-ref: .
